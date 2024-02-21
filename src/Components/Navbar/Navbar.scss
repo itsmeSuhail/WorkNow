@@ -1,0 +1,170 @@
+.navbar {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background: #008BDC !important;
+    transition: 0.5s all ease;
+    position: sticky;
+    z-index: 999;
+    top: 0;
+
+    .notification {
+        color: white;
+    }
+
+    &.active {
+        background-color: #fff !important;
+        color: black;
+
+        .link {
+            color: black;
+        }
+
+        .notification {
+            color: black;
+        }
+    }
+
+    // box-shadow: unset!important;
+}
+
+.menuPro {
+    width: 100%;
+    padding: 10px 0px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 300;
+    color: grey;
+    font-family: "Montserrat", sans-serif;
+    margin-top: 62px;
+    z-index: 1111;
+    transition: all 0.3s linear;
+    background-color: white;
+    position: sticky;
+    top: 63px;
+    border: 1px solid #d8d7d7;
+    z-index: 1111;
+    background-color: white;
+    position: sticky;
+    top: 63px;
+    border-left: none;
+    border-radius: none;
+    border-right: none;
+    padding: 1px 20px;
+
+    .css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
+        color: unset;
+    }
+
+    .css-1aquho2-MuiTabs-indicator {
+        display: none;
+    }
+    @media screen and (max-width:600px) {
+        &{
+            top: 52px;
+            margin-top: 52px;
+        }
+    }
+
+}
+
+.navContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 25px;
+    font-weight: 500;
+
+    .left {
+        width: 120px;
+        display: flex;
+        align-items: center;
+    }
+
+    .right {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .linkParent {
+        width: 89px;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .user_Icon {
+        margin-left: 32px;
+    }
+
+    h2.title {
+        /* width: 120px; */
+        color: white;
+    }
+
+    .small_screen {
+        display: none;
+    }
+
+    @media screen and (max-width:850px) {
+        .linkParent {
+            width: 68px;
+        }
+    }
+
+    @media screen and (max-width:600px) {
+        .navContainer {
+            padding: 0 15px;
+        }
+
+        .linkParent {
+            width: 68px;
+        }
+
+        .notification {
+            display: none;
+        }
+
+        .small_screen {
+            display: unset;
+        }
+
+        .navContainer {
+            padding: 0;
+        }
+    }
+
+    @media screen and (max-width:430px) {
+        .linkParent {
+            width: 59px;
+            font-size: 16px;
+        }
+
+        .user_Icon {
+            margin-left: 5px;
+        }
+    }
+
+}
+
+@media screen and (max-width:590px) {
+    .navContainer {
+        padding: 0 10px;
+    }
+
+    .menuPro {
+        padding: 2px 10px;
+    }
+}
+
+@media screen and (max-width:445px) {
+    .css-hyum1k-MuiToolbar-root {
+        padding: 1px !important;
+    }
+
+    .navContainer {
+        padding: 0 2px;
+    }
+}

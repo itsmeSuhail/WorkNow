@@ -1,0 +1,36 @@
+.Applied{
+        width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+    .container {
+        width:100%;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    
+        .breadcrumbs {
+          font-weight: 300;
+          text-transform: uppercase;
+          font-size: 13px;
+          color: #555;
+        }
+    
+        h1 {
+        }
+    
+        p {
+          color: #999;
+          font-weight: 300;
+        }
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 10px 0px;
+            width: 100%;
+            a {
+                width: 25%;
+            }
+    }    
+}}

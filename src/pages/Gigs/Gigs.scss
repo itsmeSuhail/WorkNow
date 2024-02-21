@@ -1,0 +1,163 @@
+.gigs {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+
+  
+    .container {
+      width:100%;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+  
+      .breadcrumbs {
+        font-weight: 300;
+        text-transform: uppercase;
+        font-size: 13px;
+        color: #555;
+      }
+  
+      h1 {
+      }
+  
+      p {
+        color: #999;
+        font-weight: 300;
+      }
+  
+      .menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+  
+        .left {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          color: #555;
+          font-weight: 300;
+  
+          input{
+            padding: 5px;
+            border: 1px solid lightgrey;
+            border-radius: 5px;
+            outline: none;
+  
+            &::placeholder{
+              color: #999;
+            }
+          }
+  
+          button{
+            padding: 5px 10px;
+            background-color: #008BDC;
+            color: white;
+            border: none;
+            font-weight: 500;
+            border-radius: 5px;
+            cursor: pointer;
+          }
+  
+        }
+  
+        .right {
+          position: relative;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+  
+          .sortBy {
+            color: #555;
+            font-weight: 300;
+          }
+  
+          .sortType {
+            font-weight: 500;
+          }
+  
+          img {
+            width: 15px;
+            cursor: pointer;
+          }
+  
+          .rightMenu {
+            padding: 20px;
+            background-color: white;
+            border: 0.5px solid lightgrey;
+            border-radius: 5px;
+            position: absolute;
+            top: 30px;
+            right: 0;
+            z-index: 9;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            color: #555;
+  
+            span {
+              cursor: pointer;
+            }
+          }
+        }
+      }
+  
+      .cards {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px 0px;
+        width: 100%;
+         a {
+          width: 25%;
+      }
+      }
+      @media screen and (max-width:980px) {
+        .cards a {
+          width: 33%;
+      }
+      @media screen and (max-width:830px) {
+        &{
+      padding: 30px 10px;
+
+        }
+        .gigCard {
+          width: 98%;}
+      }
+      }
+      @media screen and (max-width:750px) {
+        .cards a {
+          width: 48%;
+      }
+      .menu .left input {
+        width: 122px;}
+      }
+      @media screen and (max-width:600px) {
+        .cards a {
+          width: 50%;
+      }
+      .menu .left {
+        gap: 5px;
+        input {
+          width: 99px;
+      }
+      }
+    .menu .right .sortBy {
+      font-size: 15px;}
+      .menu .right .sortType {
+        font-size: 15px;}
+
+      }
+      @media screen and (max-width:500px) {
+        .cards  {
+          a{
+
+            width: 300px;
+          } 
+          justify-content: center;
+      }
+      .menu .right {display: none;}
+      }
+    }
+  }

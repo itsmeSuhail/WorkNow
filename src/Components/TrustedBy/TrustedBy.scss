@@ -1,0 +1,36 @@
+.trustedBy {
+    background-color: #fafafa;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+  align-items: center;
+    .container {
+      max-width: 760px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      color: rgb(200, 200, 200);
+      font-weight: 500;
+  
+      img{
+        height: 50px;
+        object-fit: contain;
+      }
+
+    }
+    @media screen and (max-width:635px) {
+      &{
+        height: 75px;
+      }
+      .container img {
+        height: 47px;}
+
+    }
+    @media screen and (max-width:501px) {
+      .container img:nth-child(even) {
+        display: none;}
+        &{
+          height: 55px;
+        }
+    }
+  }

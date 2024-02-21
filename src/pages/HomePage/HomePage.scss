@@ -1,0 +1,256 @@
+.home {
+
+  .features {
+    background: #f6f6f6;
+    color: black;
+
+    &.dark {
+      background-color: #0d084d;
+
+      h1 {
+        color: white !important;
+      }
+
+      i {
+        font-weight: 300;
+      }
+
+      p {
+        margin-bottom: 20px;
+        color: white !important;
+      }
+
+      .title {
+        color: white !important;
+        font-weight: 300 !important;
+        font-size: 14px !important;
+      }
+
+      button {
+        background-color: #1dbf73;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        width: max-content;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+
+      .ft-title {
+        color: white;
+      }
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      padding: 22px 40px;
+
+      .item {
+        width: 100%;
+
+        h1 {
+          font-size: 30px;
+          word-wrap: break-word;
+          padding: 10px;
+          margin-bottom: 10px;
+        }
+
+        .title {
+          width: 100%;
+          margin-left: 0;
+        }
+
+        .ft-title+p {
+          font-family: sans-serif;
+          margin-bottom: 24px;
+          padding: 5px;
+          color: #6e6c6c;
+          padding-left: 30px;
+          word-wrap: break-word;
+        }
+
+        .ft-title img {
+          width: 21px;
+          margin-right: 10px;
+        }
+
+        .ft-title {
+          display: flex;
+          align-items: center;
+          padding: 4px;
+          font-size: 17px;
+        }
+      }
+
+      .item:last-child {
+        display: flex;
+        padding: 40px 0;
+        width: fit-content;
+        justify-content: flex-end;
+      }
+
+      .item:last-child video {
+        border-radius: 10px;
+        overflow: hidden;
+        cursor: pointer;
+        width: 470px;
+        object-fit: cover;
+        height: 285px;
+      }
+
+      .item:last-child img {
+        width: 100%;
+      }
+
+      @media screen and (max-width:1050px) {
+        .item:last-child video {
+          width: 385px;
+        }
+      }
+
+      @media screen and (max-width:900px) {
+        .item:last-child video {
+          width: 385px;
+        }
+
+        & {
+          flex-direction: column;
+        }
+
+        .item:last-child video {
+          width: 543px;
+        }
+
+        .item:last-child {
+          justify-content: center;
+          width: 100%;
+        }
+
+        .item:last-child img {
+          display: none;
+        }
+      }
+
+      @media screen and (max-width:650px) {
+        & {
+          padding: 22px 17px;
+        }
+
+        .item h1 {
+          font-size: 28px;
+        }
+
+        .item .ft-title+p {
+          font-size: 15px;
+        }
+
+        .item .ft-title {
+          font-style: 16px;
+        }
+
+        .item .ft-title img {
+          width: 18px;
+        }
+
+        .item:last-child video {
+          width: 100%;
+          height: 270px;
+          object-fit: cover;
+        }
+      }
+      @media screen and (max-width:440px) {
+        .item:last-child video {
+          width: 100%;
+          height: 210px;
+          object-fit: cover;
+        }
+      }
+
+    }
+
+  }
+
+  .explore {
+    background-color: white;
+    margin: 50px 0;
+
+    .container {
+      padding: 20px 40px;
+
+      h1 {
+        padding: 0 5px;
+      }
+
+      .items {
+        display: flex;
+        /* border: 2px solid orange; */
+        padding: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .item {
+          width: 23%;
+          display: flex;
+          flex-direction: x;
+          flex-direction: column;
+          align-items: center;
+          cursor: pointer;
+          margin: 15px 7px;
+          padding: 20px;
+          span{
+            margin-top: 4px;
+            
+          }
+          .imgLayer{
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+        
+          }
+          border-radius: 3px;
+          overflow: hidden;
+          transition: all 0.4s linear;
+
+          img {
+            display: flex;
+            width: 100%;
+          }
+        }
+      }
+
+      @media screen and (max-width:1050px) {
+        & {
+          padding: 20px;
+        }
+      }
+
+      @media screen and (max-width:730px) {
+        & {
+          padding: 20px;
+        }
+
+        .items .item {
+          width: 45%;
+        }
+
+        h1 {
+          font-size: 25px;
+        }
+      }
+
+      @media screen and (max-width:480px) {
+        .items .item {
+          width: 80%;
+        }
+      }
+
+    }
+
+  }
+}

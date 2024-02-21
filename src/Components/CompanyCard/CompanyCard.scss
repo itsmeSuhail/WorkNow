@@ -1,0 +1,54 @@
+.companyCard{
+width: 23.5%;
+margin: 10px 5px;
+    .actionContainer {
+        padding: 20px;
+        width: 100%;
+        .companyProfile {
+            margin-bottom: 10px;
+            .Initialdetails {
+                padding: 10px 0;
+                .positionName {
+                    font-size: 18px;
+                    padding: 4px 0;
+                }
+                .companyName {
+                    font-size: 15px;
+                    color: grey;
+                }
+            }
+            .imgContainer {
+                height: 50px;
+                display: flex;
+                img {
+                    display: flex;
+                    width: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
+        .detailsContainer {
+            padding: 10px 0;
+            .option {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 5px 0;
+                .key {
+                    font-size: 16px;
+                    color: gray;
+                }
+                .value {
+                    font-size: 16px;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+    .btnContainer {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 10px 0;
+    }
+}

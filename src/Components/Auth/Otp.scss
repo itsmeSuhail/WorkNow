@@ -1,0 +1,58 @@
+.confirmMail {
+    display: flex;
+    flex-direction: column;
+    h2.title {
+        padding: 10px;
+        margin: 0;
+    }
+    .pShowoptions {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 0;
+        .psubtitle {
+            font-size: 17px;
+            color: gray;
+            padding: 2px 0;
+        }
+        span.changemail {
+            font-weight: 600;
+            color: #928d8d;
+            cursor: pointer;
+        }
+    }
+    .container {
+        width: 100%;
+        display: flex;
+        margin-top: 30px;
+        flex-direction: column;
+        .otpContainer {
+            width: 100%;
+            /* border: 2px solid orange; */
+            .verifierBtn {
+                padding: 20px 0;
+                display: flex;
+                align-items: center;
+                width: 100%;
+                /* border: 2px solid; */
+                justify-content: center;
+            }
+            .flex.gap-2 {
+                display: flex;
+                width: 100%;
+                input.input.input-bordered.px-0.text-center {
+                    width: 50px;
+                    margin: 4px;
+                    height: 40px;
+                    /* padding: 20px; */
+                    font-size: 20px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    @media screen and (max-width:430px) {
+        .container .otpContainer .flex.gap-2 input.input.input-bordered.px-0.text-center {
+            width: 36px;
+        }
+    }
+}

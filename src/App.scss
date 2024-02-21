@@ -1,0 +1,42 @@
+* {
+    .link {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+  .error{
+    color: red;
+    width: 100%;
+  }
+
+  .slider .slick-next{
+    right: -10px!important;
+    width: unset;
+    height: unset;
+    top: 149px!important;
+        background: #e5dbdb!important;
+    color: white!important;
+    padding: 8px!important;
+    border-radius: 5px!important;
+    @media screen and (max-width:440px) {
+      &{
+        display: none!important;
+      }
+    }
+  }
+  .slider .slick-prev{
+    left: -13px!important;
+    top: 149px!important;
+        background: #e5dbdb!important;
+    color: white!important;
+    width: unset;
+    height: unset;
+    padding: 8px!important;
+    border-radius: 5px!important;
+    @media screen and (max-width:440px) {
+      &{
+        display: none!important;
+      }
+    }
+  }
+  
