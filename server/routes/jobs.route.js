@@ -2,7 +2,6 @@ import express from "express"
 import { validUser } from "../utils/verifyUser.js";
 import jobs from "../models/jobs.model.js";
 import appliedSceham from "../models/applied.model.js";
-import { Filter2Rounded } from "@mui/icons-material";
 const JobsRouter = express.Router();
 JobsRouter.get("/all", async (req, res, next) => {
     const data = await jobs.find();

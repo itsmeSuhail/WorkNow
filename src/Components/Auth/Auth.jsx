@@ -8,6 +8,7 @@ import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import { basekey } from '../../key'
 import { apiUrl } from '../../ApiKeys'
+import { toast } from 'react-toastify'
 const Auth = ({ state, handle }) => {
     const [isVerifying, setisVerifying] = useState(false);
     const [error, setError] = useState(null);
@@ -46,6 +47,7 @@ const Auth = ({ state, handle }) => {
             if(userstate.password!==''&&userstate.email!=''){
                 getDataNow(userstate).then(res => {
                     if (res) {
+                        toast.success("otp has been sent on your email")
                         setisVerifying(!isVerifying);
                     }
                 })

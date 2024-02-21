@@ -103,7 +103,7 @@ const Details = () => {
     <div className="details_wrapper">
         <div className="boxFiled">
         <InputBox
-        label={5}
+        label={1}
         fun={handleDetails}
         error={userDetailsError.name}
         value={userDetails.name}
@@ -114,7 +114,7 @@ const Details = () => {
         </div>
         <div className="boxFiled">
         <InputBox
-        label={5}
+        label={1}
         error={userDetailsError.email}
 
         fun={handleDetails}
@@ -127,7 +127,7 @@ const Details = () => {
         </div>
         <div className="boxFiled">
         <InputBox
-        label={5}
+        label={15}
         error={userDetailsError.mobile}
 
         fun={handleDetails}
@@ -139,7 +139,7 @@ const Details = () => {
         </div>
         <div className="boxFiled">
         <InputBox
-        label={5}
+        label={20}
         error={userDetailsError.resume}
 
         fun={handleDetails}
@@ -162,7 +162,7 @@ const Details = () => {
     <div className="details_wrapper">
         <div className="boxFiled">
         <InputBox
-        label={5}
+        label={3}
         error={userDetailsError.socialMedia.linkedin}
 
         fun={(e)=>{
@@ -175,8 +175,8 @@ const Details = () => {
                     }
                 }))
                 return {...prev,socialMedia:{
-                    ...prev.socialMedia,
-                    [name]:value
+                    github:prev.socialMedia.github,
+                    linkedin:value
                 }}
             })
         }}
@@ -193,15 +193,9 @@ const Details = () => {
          fun={(e)=>{
             const {name,value}=e.target;
             setuserDetails(prev=>{
-                setuserDetailsError(prev=>({
-                    ...prev,socialMedia:{
-                        ...prev.socialMedia,
-                        [name]:null
-                    }
-                }))
                 return {...prev,socialMedia:{
-                    ...prev.socialMedia,
-                    [name]:value
+                    linkedin:prev.socialMedia.linkedin,
+                    "github":value
                 }}
             })
         }}
@@ -237,7 +231,7 @@ const Details = () => {
                 [name]:value
             }}))
         }}
-        label={4}
+        label={5}
         value={userDetails.education.eduType}
         name={"eduType"}
         options={["School","College"]}
@@ -270,7 +264,7 @@ const Details = () => {
         </div>
         <div className="boxFiled">
         <InputBox
-        label={5}
+        label={2}
     error={userDetailsError.education.eduStartTime}
         fun={(e)=>{
             const {name,value}=e.target;
@@ -292,7 +286,7 @@ const Details = () => {
         </div>
         <div className="boxFiled">
         <InputBox
-        label={5}
+        label={2}
         error={userDetailsError.education.eduEndTime}
         fun={(e)=>{
             const {name,value}=e.target;

@@ -40,6 +40,7 @@ const haveValues = {
     ...(Object.keys(socialMedia).length > 0 && { socialMedia }),
     ...(Object.keys(education).length > 0 && { education })
 };
+console.log(haveValues,"Dekho")
 
     if(Object.keys(haveValues).length===0)return next(new CustomError("fields required",400,{fileds:"please add fields to update"}));
     const pointsObj=await pointSchema.findOne({userid:id});
@@ -54,13 +55,14 @@ const haveValues = {
             }
         }
     );
-    await userSchema.findOneAndUpdate({id},{
+   const Udata= await userSchema.findOneAndUpdate({id},{
         $set:{
             ...haveValues
         }
-    })
-    res.status(200).json(haveValues);
+    },{new:true})
+    res.status(200).json(Udata);
   } catch (error) {
+    console.log(error)
     return next(error);
   }
 })
@@ -101,12 +103,12 @@ user.route("/experience/:id").get(validUser,async(req,res,next)=>{
                 }
             }
         );
-        await experienceSchema.findOneAndUpdate({userId:id},{
+     const Udata=   await experienceSchema.findOneAndUpdate({userId:id},{
             $set:{
                 ...haveValues
             }
-        })
-        res.status(200).json(haveValues);
+        },{new:true})
+        res.status(200).json(Udata);
       } catch (error) {
         return next(error);
       }
@@ -146,12 +148,12 @@ user.route("/project/:id").get(validUser,async(req,res,next)=>{
                 }
             }
         );
-        await projectSchema.findOneAndUpdate({userId:id},{
+    const Udata=    await projectSchema.findOneAndUpdate({userId:id},{
             $set:{
                 ...haveValues
             }
-        })
-        res.status(200).json(haveValues);
+        },{new:true})
+        res.status(200).json(Udata);
       } catch (error) {
         return next(error);
       }

@@ -85,7 +85,7 @@ useEffect(() => {
   const [userPointValue, setuserPointValue] = useState(0)
   useEffect(()=>{
     if(currentUser)fetchUserPoints(dis,currentUser?._id)
-   
+   console.log("no loading")
   },[])
   useEffect(()=>{
     setuserPointValue(userPoints.data)

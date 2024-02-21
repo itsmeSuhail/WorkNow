@@ -8,6 +8,7 @@ import getCurrentUser from '../../utils/getCurrentUser';
 import { useDispatch, useSelector } from 'react-redux';
 import Cookies from 'js-cookie';
 import { toast } from 'react-toastify';
+import { fetchUserPoints } from '../../redux/apiCalls/userPoints.api';
 const CompanyCard = ({ data, hasApplied ,refetch}) => {
     let jobType = "Job";
     if (data["duration"]) {
@@ -44,6 +45,7 @@ const CompanyCard = ({ data, hasApplied ,refetch}) => {
                         Authorization: `Bearer ${Cookies.get("varifiedUser")}` // Attach the Authorization header
                     }
                 });
+                fetchUserPoints(dis,details.userId)
                 refetch();
             } else {
                 toast.error("You don't have enough points");

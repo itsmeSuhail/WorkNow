@@ -36,10 +36,10 @@ Auth.post("/", async (req, res, next) => {
         const obj = { otp ,id:_id};
         const token = CreatTokenWithTime(obj, "5m");
         await userSchema.findOneAndUpdate({ _id }, { $set: { otp } }, { new: true });
-        // await sendNotification(email,  html,subject)
+        await sendNotification(email,  html,subject)
         res.cookie("userAuthKey", token, {
              maxAge: 3600000
-        }).status(200).json({ message: "sucess", data: "otp has been sent successfully",otp });
+        }).status(200).json({ message: "sucess", data: "otp has been sent successfully" });
 
     } catch (error) {
         return next(error);

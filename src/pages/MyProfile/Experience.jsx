@@ -63,7 +63,7 @@ const Experience = () => {
     <div className="details_wrapper">
         <div className="boxFiled">
         <InputBox
-        label={5}
+        label={10}
         fun={handleDetails}
         value={userDetails.companyName}
         name={"companyName"}
@@ -73,7 +73,7 @@ const Experience = () => {
         </div>
         <div className="boxFiled">
         <InputBox
-        label={5}
+        label={8}
         fun={handleDetails}
         value={userDetails.companyRole}
         name={"companyRole"}
@@ -84,7 +84,7 @@ const Experience = () => {
         </div>
         <div className="boxFiled">
         <InputBox
-        label={5}
+        label={10}
         fun={handleDetails}
         value={userDetails.companyLink}
         name={"companyLink"}
@@ -98,13 +98,13 @@ const Experience = () => {
         fun={handleDetails}
         value={userDetails.expType}
         name={"expType"}
-        placeholder={"enter job type"}
+        placeholder={"enter experience"}
         type={"text"}
         />
         </div>
         <div className="boxFiled">
         <InputBox
-        label={5}
+        label={2}
         fun={handleDetails}
         value={userDetails.expStartTime}
         name={"expStartTime"}
@@ -114,7 +114,7 @@ const Experience = () => {
         </div>
         <div className="boxFiled">
         <InputBox
-        label={5}
+        label={2}
         fun={handleDetails}
         value={userDetails.expEndTime}
         name={"expEndTime"}

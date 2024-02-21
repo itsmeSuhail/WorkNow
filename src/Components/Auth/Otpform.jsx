@@ -8,6 +8,7 @@ import { apiUrl } from "../../ApiKeys";
 import { useDispatch } from "react-redux";
 import { fetchUserPoints } from "../../redux/apiCalls/userPoints.api";
 import cookie from "js-cookie"
+import { toast } from "react-toastify";
 const OtpInput = (props) => {
   const {
     size = 6,
@@ -142,7 +143,7 @@ return data;
   getDataNow({otp:total}).then(res=>{
     try {  if(res){
      
-
+     toast.success("logged in successfull")
       handle();
     }
 

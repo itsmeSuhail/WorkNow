@@ -25,6 +25,7 @@ const userPoints = new Schema({
   companyRole: { type: Number, default: 8 },
   expStartTime: { type: Number, default: 2 },
   expEndTime: { type: Number, default: 2 },
+  coverLetter:{type:Number,default:10}
 });
 const userDetails = new Schema({
   name: { type: String, required: [true, "name is required"] },

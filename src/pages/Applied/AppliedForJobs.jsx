@@ -11,10 +11,6 @@ function Gigs() {
     const {id}=useParams();
    const dis= useDispatch();
    const {data,loading,error}=useSelector(state=>state.appliedJob)
-  
-
-
-
   useEffect(() => {
         fetchAppliedJobs(dis,id);
   }, [id]);

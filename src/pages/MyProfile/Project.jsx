@@ -74,7 +74,7 @@ const Project = () => {
         </div>
         <div className="boxFiled">
         <InputBox
-        label={5}
+        label={6}
         fun={handleDetails}
         value={userDetails.projectDesc}
         name={"projectDesc"}
@@ -85,7 +85,7 @@ const Project = () => {
         </div>
         <div className="boxFiled">
         <InputBox
-        label={5}
+        label={10}
         fun={handleDetails}
         value={userDetails.projectLink}
         name={"projectLink"}
@@ -95,7 +95,7 @@ const Project = () => {
         </div>
         <div className="boxFiled">
         <InputBox
-        label={5}
+        label={4}
         fun={handleDetails}
         value={userDetails.peopleInvolve}
         name={"peopleInvolve"}
@@ -105,7 +105,7 @@ const Project = () => {
         </div>
         <div className="boxFiled">
         <InputBox
-        label={5}
+        label={10}
         fun={handleDetails}
         value={userDetails.coverLetter}
         name={"coverLetter"}
